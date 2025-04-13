@@ -1,1 +1,7 @@
-spring.application.name=ya-professional-task-2
+spring:
+  application.name: ya-professional-task-2
+  datasource:
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:studentsdb}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+  liquibase.change-log: classpath:db/changelog/changelog-master.yaml
